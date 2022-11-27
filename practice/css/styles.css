@@ -45,3 +45,31 @@ section div {
     margin: 20px 0;
     transition: margin-left 3s;
 }
+
+#flex {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#flex div:nth-of-type(1) {
+    
+    background-color: red;
+    flex-shrink: 2;
+}
+#flex div:nth-of-type(2) {
+    background-color: blue;
+}
+#flex div:nth-of-type(3) {
+    background-color: green;
+    flex-grow: 2;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+    padding: 10% 0;
+}
