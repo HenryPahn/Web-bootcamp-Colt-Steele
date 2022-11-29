@@ -1,0 +1,68 @@
+145. Quick Numbers Quiz
+- NaN: Not a number
+  0/0 = NaN
+  1 + NaN = NaN
+- Always put the semicolom ";" at the end of the statement. 
+
+
+147. Updating variable 
+- If you want to clear the terminal: clear()
+
+152. Introducing strings
+- There are 2 cases for quote usage:
+  'You had me at "hello"'
+  "You had me at 'hello'"
+  [If at the begin and end are double quotes, there must be normal quotes inside; reverse]
+
+153. Indices & length
+- a string is a character array so it is same as C/C++ language.
+  let name = "Hoang";
+  name[2] = "a";
+- use "length" syntax to count the length of string. 
+  let animal = "Octupus";
+  animal.length = 7;
+  "dog".length = 3;
+  "lol" + "lol" = "lollol";
+  
+  let firstName = "River";
+  let lastName = "Phoenix";
+  firstName + lastName = "RiverPhoenix";
+  [Defautly, if you want to change "R" of "River" to lovercase, "r", you have to modify the whole word to "river"]
+
+
+  result = 1 + "hi";
+  result = "1hi";
+
+154. String methods 
+- Uppercase: [variable].toUpperCase()
+- Lowercase: [variable].toLowerCase()
+- Eliminate redundant space between words in the sentence [used for string only]: [variable].trim() 
+- We can use many methods at the same time for a variable: [variable].trim().toUpperCase();
+
+155. String methods with arguments
+- Find characters or words in a string: [variable].indexOf('[finding]')
+- Print out characters at the expected position: [variable].slice(begin position, end position)
+  [when the value of begin or end position is negative, it means the position of reverse string.
+- Print out a string many time: [variable].repeat()]
+
+156. String templates literals
+- 2 ways to print out a whole sentence with number variable
+  "you bought " + qty + " " + product + ". Total is: " + price * qty  
+ ="You bought ${qty} ${product.toUpperCase()}. Total is: $${price * qty}" 
+
+157. Undefined & NULL
+- A variable which has not been assigned yet is called a NULL variable.
+- A value of a NULL variable is undefined.
+
+158. Math objects & random number 
+- There are many constance that Math in JV provides: Math.[objects]
+  Math.PI 
+  Math.round(4.9) = Math.ceil(4.5) //5 
+  Math.abs(-456) //456
+  Math.pow(2, 5) //32
+  Math.floor(3.9999) //3 
+- random in Jv
+  Math.random()  
+  [use * [a condition] to limit the upper of the random]
+  Math.random() * 6 [random from 1 to 6]
+  
