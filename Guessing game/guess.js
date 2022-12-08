@@ -1,0 +1,1 @@
+let maximum = parseInt(prompt("Enter maximum."));
