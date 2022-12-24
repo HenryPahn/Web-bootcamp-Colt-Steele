@@ -162,3 +162,36 @@ value into the position: [array].splice([start position], [deleteCount], [value]
 - To take all the keys in an object literal: Object.keys([Object Literal])
 - To take all the values in an object literal: Object.values([Object Literal])
 - To make each object to be an array: Object.entries([object literal]) 
+
+212. Function expressions 
+- There is another way to create a function: 
+  const [function's name] = function([parameter]) { };
+
+213.Higher order function 
+- function can be used as a parameter for another function. 
+  [function1](function2) 
+  [don't use bracket after function 2. 
+
+215. Defining methods 
+- In object literals, the object can be a function
+  const [objects] = {
+ 	object : function () {
+		return ;
+	},
+	object : function () {
+		return ;
+	}
+  }
+- Access the objects which are functions: myMath.object()
+- Shorthand of this writing method is: object(parameter) {return ;},
+  [It means the object can be a function without the presence of "function" word in the syntax
+
+216. The mysterious keyword "this" 
+- The function can use the objects which are in the same block of object literals by using "this". 
+  const square = {
+  	side : 5,
+ 	[function as an object] () {
+		return this.[object];
+  	}
+  }
+- "this" is used to display the objects in the block.
