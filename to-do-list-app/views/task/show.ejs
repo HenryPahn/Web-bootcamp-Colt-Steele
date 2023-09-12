@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= task.name %></title>
+</head>
+<body>
+    <h1><%= task.name %></h1>
+    <p><b>Start at</b>: <%= task.date.getUTCDate() %> 
+        / <%= task.date.getUTCMonth() + 1 %> 
+        / <%= task.date.getUTCFullYear() %></p>
+    <p><%= task.note %></p>
+    <a href="/toDoList">Back to the list</a>
+    <a href="/toDoList/<%= task._id %>/edit">Edit task</a>
+    <form action="/toDoList/<%= task.id %>?_method=DELETE" method="POST"><button>Delete task</button></form>
+</body>
+</html>

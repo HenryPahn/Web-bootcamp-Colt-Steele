@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= account.name %>'s profile</title>
+</head>
+<body>
+    <h1>Hello <%= account.name %></h1>
+    <h2>Your to-do-list</h2>
+    <% if(account.list.length === 0 || account.list.length === undefined) {%>
+        <p>You haven't add any tasks</p>
+    <%} else {%>
+        <ul>
+            <% for(let task of account.list) {%>
+            <li> <a href="/toDoList/account/<%= account._id %>/task/<%= task._id %>"><%= task.name %> </a>
+                - <%= task.date.getUTCDate() %> 
+                / <%= task.date.getUTCMonth() + 1 %> 
+                / <%= task.date.getUTCFullYear() %> 
+                - <%= task.note %>
+            </li>
+            <% } %>
+        </ul>
+    <% } %>
+    <a href="/accounts/editPW">Edit password</a>
+    <form action="/toDoList/account/logout" method="POST">
+        <button>Log out</button>
+    </form>
+</body>
+</html>
+
+
+
